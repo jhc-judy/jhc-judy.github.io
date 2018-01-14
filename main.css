@@ -12,10 +12,10 @@ html {
     letter-spacing: 1.1px;
 }
 
-@media (max-width: 414px){
-	.menu{
-		padding-left: 10px;
-	}
+@media (max-width: 414px) {
+    .menu {
+        padding-left: 10px;
+    }
 }
 
 body,
@@ -101,10 +101,11 @@ li a:not(:last-child) {
 }
 
 #world {
-    \\position: absolute;
     width: 100%;
+    float: left;
     height: 70%;
     overflow: hidden;
+    margin: auto;
 }
 
 #intro {
@@ -153,36 +154,42 @@ li a:not(:last-child) {
     opacity: 1;
 }
 
-.about {
+.about h1 {
     max-width: 50%;
-    height: auto;
     margin: 0 auto;
-    padding-top: 50px;
     color: white;
     align-items: center;
-    box-sizing:content-box;
-}
-
-.about h1 {
     text-align: center;
-    padding-bottom: 10px;
+    padding: 5%;
+    \\transform: translate(0%, 200%);
 }
 
-.about img{
+.about1 h1 {
+    max-width: 50%;
+    margin: 0 auto;
+    color: white;
+    align-items: center;
+    text-align: center;
+    transform: translate(0%, 200%);
+}
+
+/*
+.about img {
     max-width: 40%;
     height: auto;
     display: inline-block;
     border-radius: 50%;
     transform: translate(-0%, 10%);
 }
+*/
 
-.about p{
+.about1 p {
     max-width: 50%;
-    height: auto;
-    \\display: inline-block;
+    margin: 0 auto;
+    height: 50%;
     padding: 30px;
-    padding-top: 100px;
-    transform: translate(80%, -120%);
+    color: white;
+    transform: translate(5%, -20%);
 }
 
 .footer {
@@ -209,4 +216,14 @@ li a:not(:last-child) {
 .social a:hover {
     color: #d94f5c;
     cursor: pointer;
+}
+
+.github {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+.github img{
+    transform: translate(50%, 0%);
 }
