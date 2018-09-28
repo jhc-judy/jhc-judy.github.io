@@ -104,8 +104,8 @@ li a:not(:last-child) {
 #world {
     width: 100%;
     float: left;
-    height: 70%;
-    overflow: hidden;
+    height: auto;
+/*    overflow: hidden;*/
     margin: auto;
 }
 
@@ -119,6 +119,7 @@ li a:not(:last-child) {
     padding-bottom: 30px;
     text-align: center;
     color: #777;
+    transform: translate(0%, 200%);
 
 }
 
@@ -143,7 +144,6 @@ li a:not(:last-child) {
     align-items: center;
     text-align: center;
     padding: 5%;
-    \\transform: translate(0%, 200%);
 }
 
 .about1 h1 {
@@ -155,28 +155,27 @@ li a:not(:last-child) {
     transform: translate(0%, 200%);
 }
 
-/*
-.about img {
-    max-width: 40%;
+#me {
+    max-width: 20%;
     height: auto;
     display: inline-block;
     border-radius: 50%;
-    transform: translate(-0%, 10%);
+    transform: translate(200%, 40%);
 }
-*/
 
-.about1 p {
+.about2 p {
     max-width: 50%;
     margin: 0 auto;
     height: 50%;
     padding: 30px;
     color: white;
-    transform: translate(5%, -20%);
+    transform: translate(5%, 30%);
 }
 
 .footer {
     padding: 20px 0;
     text-align: center;
+    transform: translate(0%, 100%);
 }
 
 .social {
