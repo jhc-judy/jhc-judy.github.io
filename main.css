@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 
 html {
-    box-sizing: border-box;
+    /*    box-sizing: border-box;*/
 }
 
 *,
@@ -101,28 +101,6 @@ li a:not(:last-child) {
     color: #d94f5c;
 }
 
-#world {
-    width: 100%;
-    float: left;
-    height: auto;
-/*    overflow: hidden;*/
-    margin: auto;
-}
-
-#intro {
-    color: white;
-    padding-top: 30px;
-    padding-left: 10px;
-}
-
-.content {
-    padding-bottom: 30px;
-    text-align: center;
-    color: #777;
-    transform: translate(0%, 200%);
-
-}
-
 .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -132,55 +110,43 @@ li a:not(:last-child) {
     column-width: 300px;
     -webkit-column-gap: 2%;
     -moz-column-gap: 5%;
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
     max-width: 80%;
     margin: 0 auto;
 }
 
 .about1 h1 {
     max-width: 50%;
-/*    margin: 0 auto;*/
     color: white;
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*    padding: 5%;*/
 }
 
-/*
-.about1 h1 {
-    max-width: 50%;
-    margin: 0 auto;
-    color: white;
-    align-items: center;
-    text-align: center;
-    transform: translate(0%, 200%);
-}
-*/
 
 #me {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 20%;
-    border-radius: 50%;
-    text-align: center;
-    margin-top: 25%;
-/*    transform: translate(0%, 0%);*/
+/*    border-radius: 50%;*/
+    padding: 10px;
+    margin-top: 6%;
+    
 }
 
-.about2 p {
+#intro {
     max-width: 50%;
     margin: 0 auto;
-    height: 50%;
     padding: 30px;
     color: white;
-    transform: translate(5%, 10%);
 }
 
 .footer {
     padding: 20px 0;
     text-align: center;
-    transform: translate(0%, 100%);
+}
+
+.content {
+    padding-bottom: 30px;
+    text-align: center;
+    color: #777;
 }
 
 .social {
