@@ -97,6 +97,11 @@ li a:not(:last-child) {
     text-align: center;
 }
 
+.about {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 .about h1 {
     max-width: 50%;
     color: white;
