@@ -56,8 +56,9 @@ a {
     animation: line 1.5s;
 }
 
-.menu li a:hover {
+.menu li:hover a{
     color: #d94f5c;
+    text-shadow: 1px 1px 2px black, 0 0 25px #d94f5c, 0 0 5px #d94f5c;
 }
 
 li a:not(:last-child) {
@@ -68,37 +69,6 @@ li a:not(:last-child) {
     0% {
         background-position-x: 490px;
     }
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    max-height: 200px;
-}
-
-.sub {
-    display: none;
-    position: absolute;
-    box-shadow: 5px 5px 20px 3px rgba(63, 121, 191, 0.1);
-    z-index: 1;
-    padding: 12px 16px;
-    min-width: 200px;
-    background: #1c1d22;
-    border-radius: 25px;
-}
-
-.sub a {
-    text-decoration: none;
-    display: block;
-    padding: 12px 16px;
-}
-
-.dropdown:hover .sub {
-    display: block;
-}
-
-.sub a:hover {
-    color: #d94f5c;
 }
 
 .gallery {
@@ -118,6 +88,21 @@ li a:not(:last-child) {
 .about1 h1 {
     max-width: 50%;
     color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;
+    align-items: center;
+    text-align: center;
+    transform: translate(0%, 200%);
+    margin: 0 auto;
+}
+
+.about1 p {
+    max-width: 50%;
+    margin: 0 auto;
+    height: 50%;
+    padding: 30px;
+    color: white;
+    transform: translate(5%, -100%);
+    overflow: hidden;
 }
 
 
@@ -125,10 +110,8 @@ li a:not(:last-child) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-/*    border-radius: 50%;*/
-    padding: 10px;
     margin-top: 6%;
-    
+    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
 }
 
 #intro {
@@ -139,12 +122,15 @@ li a:not(:last-child) {
 }
 
 .footer {
-    padding: 20px 0;
     text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translate(0%, -10%);
 }
 
 .content {
-    padding-bottom: 30px;
     text-align: center;
     color: #777;
 }
@@ -165,9 +151,15 @@ li a:not(:last-child) {
     color: #1c1d22;
 }
 
-.social a:hover {
-    color: #d94f5c;
+.social:hover {
+    background: #d94f5c;
     cursor: pointer;
+    box-shadow: 0px 0px 30px #d94f5c, 0px 0px 5px #d94f5c;
+}
+
+.social:hover a{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 5px white;
 }
 
 .github {
