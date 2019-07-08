@@ -93,7 +93,7 @@ li a:not(:last-child) {
 
 .statement p {
     color: white;
-    margin:center;
+    margin: center;
     text-align: center;
 }
 
@@ -124,6 +124,7 @@ li a:not(:last-child) {
     margin-right: auto;
     margin-top: 6%;
     box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
+    width: 30%;
 }
 
 #intro {
