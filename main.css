@@ -83,13 +83,13 @@ li a:not(:last-child) {
     /*    overflow: hidden;*/
     max-width: 80%;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 .gallery img {
     display: block;
     margin: auto;
     max-width: 100%;
-    min-height: 100vh;
 }
 
 .statement p {
