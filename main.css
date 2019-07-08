@@ -56,7 +56,7 @@ a {
     animation: line 1.5s;
 }
 
-.menu li:hover a{
+.menu li:hover a {
     color: #d94f5c;
     text-shadow: 1px 1px 2px black, 0 0 25px #d94f5c, 0 0 5px #d94f5c;
 }
@@ -88,7 +88,13 @@ li a:not(:last-child) {
 .gallery img {
     display: block;
     margin: auto;
-    max-width:100%;
+    max-width: 100%;
+}
+
+.statement p {
+    color: white;
+    margin:center;
+    text-align: center;
 }
 
 .about h1 {
@@ -163,7 +169,7 @@ li a:not(:last-child) {
     box-shadow: 0px 0px 30px #d94f5c, 0px 0px 5px #d94f5c;
 }
 
-.social:hover a{
+.social:hover a {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 5px white;
 }
