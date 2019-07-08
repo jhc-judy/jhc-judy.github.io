@@ -148,7 +148,7 @@ li a:not(:last-child) {
     bottom: 0;
     width: 100%;
 /*    transform: translate(0%, -10%);*/
-    background: #1c1d22;
+/*    background: #1c1d22;*/
 }
 
 .content {
