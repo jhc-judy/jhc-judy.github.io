@@ -105,7 +105,7 @@ li a:not(:last-child) {
 .about h1 {
     max-width: 50%;
     color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;
+/*    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;*/
     align-items: center;
     text-align: center;
     transform: translate(0%, 200%);
@@ -116,9 +116,8 @@ li a:not(:last-child) {
     max-width: 50%;
     margin: 0 auto;
     height: 50%;
-    padding: 30px;
     color: white;
-    transform: translate(5%, -100%);
+    transform: translate(0%, 10%);
     overflow: hidden;
 }
 
