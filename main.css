@@ -21,8 +21,8 @@ html {
 
 body,
 html {
-    width: 100%;
-    height: auto;
+    margin: 0;
+    height: 100%;
     background: #1c1d22;
     font-family: "Varela Round", sans-serif;
 }
