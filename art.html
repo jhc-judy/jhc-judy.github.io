@@ -26,9 +26,9 @@
     <div class="container">
         <br><br>
         <div class="gallery">
-            <img src="images/1/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            <img src="images/2/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            <img src="images/3/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="images/1/FULL.png" onclick="passId(1);openModal();currentSlide(1);" class="hover-shadow">
+            <img src="images/2/FULL.png" onclick="passId(2);openModal();currentSlide(1);" class="hover-shadow">
+            <img src="images/3/FULL.png" onclick="passId(3);openModal();currentSlide(1);" class="hover-shadow">
         </div>
 
     </div>
@@ -37,20 +37,20 @@
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <div class="mySlides">
-                <img src="images/1/FULL.png" style="width:100%">
+                <img id="FULL" src="" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img id="DETAIL1" src="" style="width:100%">
             </div>
 
             <div class="mySlides">
-                <img src="images/1/DETAIL1.png" style="width:100%">
+                <img id="DETAIL2" src="" style="width:100%">
             </div>
 
             <div class="mySlides">
-                <img src="images/1/DETAIL2.png" style="width:100%">
+                <img id="DETAIL3" src="" style="width:100%">
             </div>
 
-            <div class="mySlides">
-                <img src="images/1/DETAIL3.png" style="width:100%">
-            </div>
             <!-- Next/previous controls -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -61,19 +61,19 @@
             </div>
             <!-- Thumbnail image controls -->
             <div class="column">
-                <img class="demo" src="images/1/FULL.png" onclick="currentSlide(1)" alt="mbtu tusvhhmf">
+                <img class="demo" id="1" src="" onclick="currentSlide(1)">
             </div>
 
             <div class="column">
-                <img class="demo" src="images/1/DETAIL1.png" onclick="currentSlide(2)" alt="mbtu tusvhhmf">
+                <img class="demo" id="2" src="" onclick="currentSlide(2)">
             </div>
 
             <div class="column">
-                <img class="demo" src="images/1/DETAIL2.png" onclick="currentSlide(3)" alt="mbtu tusvhhmf">
+                <img class="demo" id="3" src="" onclick="currentSlide(3)">
             </div>
 
             <div class="column">
-                <img class="demo" src="images/1/DETAIL3.png" onclick="currentSlide(4)" alt="mbtu tusvhhmf">
+                <img class="demo" id="4" src="" onclick="currentSlide(4)">
             </div>
         </div>
     </div>
@@ -89,6 +89,26 @@
     </div>
 
     <script>
+        //pass id
+        function passId(n) {
+            var key = n;
+            if(key === 1){
+                document.getElementById("caption").textContent = "mbtu tusvhhmf";
+            }else if(key === 2){
+                document.getElementById("caption").textContent = "ncuv uvtwiing";
+            }else if(key === 3){
+                document.getElementById("caption").textContent = "odvw vwuxjjoh";
+            }
+            document.getElementById("FULL").src = "images/" + key + "/FULL.png";
+            document.getElementById("DETAIL1").src = "images/" + key + "/DETAIL1.png";
+            document.getElementById("DETAIL2").src = "images/" + key + "/DETAIL2.png";
+            document.getElementById("DETAIL3").src = "images/" + key + "/DETAIL3.png";
+            document.getElementById("1").src = "images/" + key + "/FULL.png";
+            document.getElementById("2").src = "images/" + key + "/DETAIL1.png";
+            document.getElementById("3").src = "images/" + key + "/DETAIL2.png";
+            document.getElementById("4").src = "images/" + key + "/DETAIL3.png";
+        }
+
         // Open the Modal
         function openModal() {
             document.getElementById("myModal").style.display = "block";
@@ -115,8 +135,8 @@
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
+
             var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
             if (n > slides.length) {
                 slideIndex = 1
             }
@@ -131,7 +151,6 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
 
