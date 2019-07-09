@@ -142,7 +142,7 @@ li a:not(:last-child) {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    width: 70%;
+    width: 100%;
     max-width: 500px;
 /*    vertical-align: middle;*/
 }
