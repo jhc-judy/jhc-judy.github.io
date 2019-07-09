@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="main.css">
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
     <title>Judy Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -24,22 +26,114 @@
     <div class="container">
         <br><br>
         <div class="gallery">
-            <img src="images/1/FULL.png">
-            <img src="images/2/FULL.png">
-            <img src="images/3/FULL.png">
+            <img src="images/1/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="images/2/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="images/3/FULL.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
         </div>
 
     </div>
 
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="images/1/FULL.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/1/DETAIL1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/1/DETAIL2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/1/DETAIL3.png" style="width:100%">
+            </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="images/1/FULL.png" onclick="currentSlide(1)" alt="mbtu tusvhhmf">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/1/DETAIL1.png" onclick="currentSlide(2)" alt="mbtu tusvhhmf">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/1/DETAIL2.png" onclick="currentSlide(3)" alt="mbtu tusvhhmf">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/1/DETAIL3.png" onclick="currentSlide(4)" alt="mbtu tusvhhmf">
+            </div>
+        </div>
+    </div>
+
 
     <div class="footer">
-        <div class="social"><a href="https://www.instagram.com/jhc_judy/">IG</a></div>
-        <div class="social"><a href="https://www.linkedin.com/in/judy-chen-348558155/">in</a></div>
-        <div class="social"><a href="https://github.com/judy0501">Git</a></div>
+        <div class="social"><a href="https://www.instagram.com/jhc_judy/" class="fa fa-instagram"></a></div>
+        <div class="social"><a href="https://www.linkedin.com/in/judy-chen-348558155/" class="fa fa-linkedin"></a></div>
+        <div class="social"><a href="https://github.com/judy0501" class="fa fa-github"></a></div>
         <br><br>
         <div class="content">judychen92174@gmail.com</div>
         <br>
     </div>
+
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 
 </body>
 
