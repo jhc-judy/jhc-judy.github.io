@@ -229,7 +229,7 @@ li a:not(:last-child) {
 
     /* transition effect. not necessary */
     transition: .3s;
-    width: 60%;
+    width: 70%;
     max-width: 500px;
     margin: auto;
     color: white;
