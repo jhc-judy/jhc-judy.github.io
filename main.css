@@ -144,6 +144,7 @@ li a:not(:last-child) {
     padding: 0;
     width: 70%;
     max-width: 500px;
+/*    vertical-align: middle;*/
 }
 
 /* The Close Button */
@@ -222,7 +223,7 @@ li a:not(:last-child) {
 
 .about p {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 1px 1px 2px black;
