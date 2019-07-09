@@ -229,8 +229,8 @@ li a:not(:last-child) {
 
     /* transition effect. not necessary */
     transition: .3s;
-    width: 70%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 600px;
     margin: auto;
     color: white;
     overflow: hidden;
