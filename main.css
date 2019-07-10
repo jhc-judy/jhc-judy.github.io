@@ -30,11 +30,10 @@ html {
 .menu {
     position: fixed;
     display: flex;
-    margin: 0 auto;
+    margin: auto;
     height: 50px;
     list-style: none;
     padding-top: 10px;
-    padding-left: 30px;
 }
 
 .menu li {
@@ -93,6 +92,7 @@ li a:not(:last-child) {
     margin: auto;
     max-width: 100%;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .gallery img:hover {
@@ -109,7 +109,7 @@ li a:not(:last-child) {
     color: white;
 }
 
-.column img {
+.smallpic img {
     float: left;
     max-width: 25%;
     object-fit: contain;
@@ -144,7 +144,7 @@ li a:not(:last-child) {
     padding: 0;
     width: 100%;
     max-width: 500px;
-/*    vertical-align: middle;*/
+    /*    vertical-align: middle;*/
 }
 
 /* The Close Button */
@@ -308,13 +308,49 @@ li a:not(:last-child) {
     text-shadow: 1px 1px 2px black, 0 0 5px white;
 }
 
-.github {
-    max-width: 50%;
+.project {
+    width: 80%;
     margin: 0 auto;
-    padding: 10%;
+    padding-top: 100px;
+    text-align: center;
+    
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 300px;
+    -moz-column-width: 300px;
+    column-width: 300px;
+    -webkit-column-gap: 2%;
+    -moz-column-gap: 5%;
+    /*    overflow: hidden;*/
     min-height: 100vh;
+    margin-bottom: 150px;
 }
 
-.github img {
-    transform: translate(50%, 0%);
+.work img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.work {
+    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
+    padding: 10px;
+    cursor: pointer;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+    position: relative;
+    min-height: 500px;
+}
+
+.project h3 {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.project p {
+    color: white;
+    font-size: 15px;
 }
