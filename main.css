@@ -48,7 +48,7 @@ a {
     font-size: 22px;
     color: #777;
     text-decoration: none;
-    \\transition: all 0.45s;
+    transition: all 0.45s;
 }
 
 .menu li:hover {
@@ -206,35 +206,67 @@ li a:not(:last-child) {
 }
 
 .about {
-    /*    max-width: 80%;*/
-    margin: 0 auto;
-    min-height: 100vh;
+/*    position: relative;*/
+    margin: auto;
+/*    min-height: 100vh;*/
 }
 
-.about h1 {
+.name {
     max-width: 50%;
     color: white;
     /*    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;*/
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    margin:auto;
     padding-top: 100px;
 }
 
-.about p {
+/*
+.text {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 1px 1px 2px black;
 
-    /* transition effect. not necessary */
     transition: .3s;
     width: 80%;
     max-width: 600px;
     margin: auto;
     color: white;
     overflow: hidden;
+}
+*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+/*    text-align: center;*/
+    text-shadow: 1px 1px 3px black;
+}
+
+.about:hover .overlay {
+  opacity: 1;
 }
 
 #me {
@@ -247,7 +279,7 @@ li a:not(:last-child) {
     max-width: 600px;
     /*    margin-bottom: 150px;*/
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -65%);
 }
@@ -313,7 +345,7 @@ li a:not(:last-child) {
     margin: 0 auto;
     padding-top: 100px;
     text-align: center;
-    
+
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
