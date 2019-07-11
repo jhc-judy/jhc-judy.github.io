@@ -295,13 +295,6 @@ li a:not(:last-child) {
     transition: 1s;
 }
 
-#intro {
-    max-width: 50%;
-    margin: 0 auto;
-    padding: 30px;
-    color: white;
-}
-
 .footer {
     text-align: center;
     position: fixed;
