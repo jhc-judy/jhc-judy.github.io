@@ -218,8 +218,10 @@ li a:not(:last-child) {
     align-items: center;
     text-align: center;
     margin: auto;
-/*    position: absolute;*/
+/*    position: relative;*/
     transform: translate(0%, 200%);
+    -webkit-transform: translate(0%, 200%);
+    -ms-transform: translate(0%, 200%);
     /*    padding-top: 100px;*/
 }
 
@@ -271,7 +273,7 @@ li a:not(:last-child) {
     opacity: 1;
 }
 
-#me {
+.me {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -284,9 +286,11 @@ li a:not(:last-child) {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -65%);
+    -webkit-transform: translate(-50%, -65%);
+    -ms-transform: translate(-50%, -65%);
 }
 
-#me:hover {
+.about:hover .me{
     opacity: 0.3;
     transition: 1s;
 }
