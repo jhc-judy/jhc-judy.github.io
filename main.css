@@ -51,12 +51,12 @@ a {
     transition: all 0.45s;
 }
 
-.menu li:hover {
+.menu li:hover, .menu li:active {
     background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
     animation: line 1.5s;
 }
 
-.menu li:hover a {
+.menu li:hover a, .menu li:active a {
     color: #d94f5c;
     text-shadow: 1px 1px 2px black, 0 0 25px #d94f5c, 0 0 5px #d94f5c;
 }
@@ -101,6 +101,12 @@ li a:not(:last-child) {
     /*    display words*/
 }
 
+.gallery img:active {
+    opacity: 0.5;
+    transition: 0.3s;
+    /*    display words*/
+}
+
 /* Caption text */
 .caption-container {
     text-align: center;
@@ -118,6 +124,12 @@ li a:not(:last-child) {
 
 .active,
 .demo:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+.active,
+.demo:active {
     opacity: 1;
     transition: 1s;
 }
@@ -158,7 +170,7 @@ li a:not(:last-child) {
 }
 
 .close:hover,
-.close:focus {
+.close:focus, .close:active {
     color: #999;
     text-decoration: none;
     cursor: pointer;
@@ -195,7 +207,8 @@ li a:not(:last-child) {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
-.next:hover {
+.next:hover, .prev:active,
+.next:active {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -269,7 +282,7 @@ li a:not(:last-child) {
     text-shadow: 1px 1px 3px black;
 }
 
-.about:hover .overlay {
+.about:hover .overlay, .about:active .overlay {
     opacity: 1;
 }
 
@@ -290,7 +303,7 @@ li a:not(:last-child) {
     -ms-transform: translate(-50%, -65%);
 }
 
-.about:hover .me{
+.about:hover .me, .about:active .me{
     opacity: 0.3;
     transition: 1s;
 }
@@ -328,13 +341,13 @@ li a:not(:last-child) {
     color: #1c1d22;
 }
 
-.social:hover {
+.social:hover, .social:active {
     background: #d94f5c;
     cursor: pointer;
     box-shadow: 0px 0px 30px #d94f5c, 0px 0px 5px #d94f5c;
 }
 
-.social:hover a {
+.social:hover a, .social:active a {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 5px white;
 }
