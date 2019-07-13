@@ -98,7 +98,8 @@ li a:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.gallery img:hover, .gallery img:active {
+.gallery img:hover,
+.gallery img:active {
     opacity: 0.5;
     transition: 0.3s;
     /*    display words*/
@@ -388,6 +389,7 @@ li a:not(:last-child) {
     margin: auto;
     position: relative;
     min-height: 500px;
+    overflow: visible;
 }
 
 .project h3 {
