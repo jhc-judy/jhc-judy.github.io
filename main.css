@@ -385,7 +385,7 @@ li a:not(:last-child) {
     padding: 10px;
     cursor: pointer;
     max-width: 400px;
-    display: block;
+    display: inline-block;
     margin: auto;
     position: relative;
     min-height: 500px;
