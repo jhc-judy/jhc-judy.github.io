@@ -98,13 +98,7 @@ li a:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.gallery img:hover {
-    opacity: 0.5;
-    transition: 0.3s;
-    /*    display words*/
-}
-
-.gallery img:active {
+.gallery img:hover, .gallery img:active {
     opacity: 0.5;
     transition: 0.3s;
     /*    display words*/
