@@ -262,7 +262,7 @@ li a:not(:last-child) {
     transform: translate(-50%, -50%);
     /*    text-align: center;*/
     text-shadow: 1px 1px 3px black;
-    min-width: 320px;
+    min-width: 300px;
 }
 
 .about:hover .overlay,
