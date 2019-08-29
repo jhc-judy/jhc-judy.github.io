@@ -18,10 +18,10 @@
         </ul>
     </nav>
 
-    <div class="about">
-        <div class="name">
-            <h1>Judy Chen</h1>
-        </div>
+    <div class="about" id="bg">
+        <!--        <div class="name">-->
+        <h1 class="name">Judy Chen</h1>
+        <!--        </div>-->
         <img class="me" src="images/judy.JPG">
         <div class="overlay">
             <div class="text">Judy is an individual with a passion for creativity. She is currently a student double majoring in Computer Science and Arts, Studio. She aspires to combine both fields of her study to create something fun and beautiful. She is still a work in progress, and always strive to be better.</div>
@@ -38,9 +38,18 @@
         <br>
     </div>
 
-
-
-
+    <script src="js/three.r92.min.js"></script>
+    <script src="js/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "#bg",
+            backgroundColor: 0x1c1d22,
+            color1: 0x89ff,
+            color2: 0xff57,
+            colorMode: "lerpGradient",
+            separation: 50.00
+        })
+    </script>
 </body>
 
 </html>
