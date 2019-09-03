@@ -105,6 +105,7 @@ li a:not(:last-child) {
     /*    display words*/
 }
 
+
 /* Caption text */
 .caption-container {
     text-align: center;
@@ -344,11 +345,6 @@ li a:not(:last-child) {
 }
 
 .project {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 100px;
-    text-align: center;
-
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -357,32 +353,28 @@ li a:not(:last-child) {
     column-width: 300px;
     -webkit-column-gap: 2%;
     -moz-column-gap: 5%;
-    /*    overflow: hidden;*/
-    /*    min-height: 100vh;*/
-    margin-bottom: 50px;
-    overflow: visible;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
-.work img {
-    display: block;
-    margin: auto;
-    width: 100%;
-}
-
-.work {
+.project > .work {
     box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
     padding: 10px;
     cursor: pointer;
-    max-width: 400px;
-    display: inline-block;
+    display: block;
     margin: auto;
-    position: relative;
+    max-width: 100%;
+    cursor: pointer;
+    /*    margin-bottom: 10px;*/
+    /*    margin-top: 10px;*/
+    z-index: 10;
     min-height: 500px;
-    overflow: visible;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    float: none;
+    /*    display: inline-flex;*/
+}
+
+.work img {
+    margin: auto;
+    width: 100%;
 }
 
 .project h3 {
@@ -399,13 +391,68 @@ li a:not(:last-child) {
 .pitch {
     margin: auto;
     color: white;
-/*    display: table-cell;*/
     vertical-align: middle;
     text-align: center;
     width: 80%;
     max-width: 600px;
 }
 
-.pitch h1{
+.pitch h1 {
     text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;
+}
+
+.portfolio {
+    margin: auto;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    width: 80%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    margin: 0 10px;
+    font-family: "Varela Round", sans-serif;
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    min-width: 30px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
+    font-family: "Varela Round", sans-serif;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

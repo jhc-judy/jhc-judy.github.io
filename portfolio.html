@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Judy Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">JHC</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br>
+    <div class="portfolio">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'ART')" id="defaultOpen">ART</button>
+            <button class="tablinks" onclick="openCity(event, 'CS')">CS</button>
+        </div>
+        <br><br>
+
+        <!-- Tab content -->
+        <div id="ART" class="tabcontent">
+            <div class="container">
+                <br><br>
+                <div class="gallery">
+                    <img src="images/1/FULL.png" onclick="passId(1);openModal();currentSlide(1);" class="hover-shadow">
+                    <img src="images/2/FULL.png" onclick="passId(2);openModal();currentSlide(1);" class="hover-shadow">
+                    <img src="images/3/FULL.png" onclick="passId(3);openModal();currentSlide(1);" class="hover-shadow">
+                    <img src="images/4/FULL.png" onclick="passId(4);openModal();currentSlide(1);" class="hover-shadow">
+                    <img src="images/5/FULL.png" onclick="passId(5);openModal();currentSlide(1);" class="hover-shadow">
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img id="FULL" src="" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img id="DETAIL1" src="" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img id="DETAIL2" src="" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img id="DETAIL3" src="" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <!-- Thumbnail image controls -->
+                <div class="smallpic">
+                    <img class="demo" id="1" src="" onclick="currentSlide(1)">
+                </div>
+
+                <div class="smallpic">
+                    <img class="demo" id="2" src="" onclick="currentSlide(2)">
+                </div>
+
+                <div class="smallpic">
+                    <img class="demo" id="3" src="" onclick="currentSlide(3)">
+                </div>
+
+                <div class="smallpic">
+                    <img class="demo" id="4" src="" onclick="currentSlide(4)">
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            //pass id
+            function passId(n) {
+                var key = n;
+                if (key === 1) {
+                    document.getElementById("caption").textContent = "mbtu tusvhhmf";
+                } else if (key === 2) {
+                    document.getElementById("caption").textContent = "ncuv uvtwiing";
+                } else if (key === 3) {
+                    document.getElementById("caption").textContent = "odvw vwuxjjoh";
+                } else if (key === 4) {
+                    document.getElementById("caption").textContent = "pewx wxvykkpi";
+                } else if (key === 5) {
+                    document.getElementById("caption").textContent = "qfxy xywzllqj";
+                }
+                document.getElementById("FULL").src = "images/" + key + "/FULL.png";
+                document.getElementById("DETAIL1").src = "images/" + key + "/DETAIL1.png";
+                document.getElementById("DETAIL2").src = "images/" + key + "/DETAIL2.png";
+                document.getElementById("DETAIL3").src = "images/" + key + "/DETAIL3.png";
+                document.getElementById("1").src = "images/" + key + "/FULL.png";
+                document.getElementById("2").src = "images/" + key + "/DETAIL1.png";
+                document.getElementById("3").src = "images/" + key + "/DETAIL2.png";
+                document.getElementById("4").src = "images/" + key + "/DETAIL3.png";
+            }
+
+            // Open the Modal
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            // Close the Modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+
+                var dots = document.getElementsByClassName("demo");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+        <div id="CS" class="tabcontent">
+            <br><br>
+            <div class="project">
+                <!-- Portfolio Gallery Grid -->
+
+                <div class="work">
+                    <a href="https://github.com/judy0501/Down-the-Stairs">
+                        <img src="images/projects/down-the-stairs.PNG">
+                        <h3>Down the Stairs</h3>
+                        <br><br>
+                        <p>Voice control web game made with Tensorflow, HTML, CSS.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/Projection-Mapping">
+                        <img src="images/projects/Projection_Mapping.gif">
+                        <h3>Projection Mapping</h3>
+                        <br><br>
+                        <p>Using Vive tracker to reduce the number of calibrations needed for projection mapping. Made with Unity game engine and C#.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/Unity-ML-maze">
+                        <img src="images/projects/ML_Maze.jpg">
+                        <h3>ML Maze</h3>
+                        <br><br>
+                        <p>Using Neural Network to train a bot to find optimal path to the target in mazes. Made with Unity game engine, C#, and Tensorflow.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <img src="images/projects/database.PNG">
+                    <h3>E-Commerce Demo</h3>
+                    <br><br>
+                    <p>Coursework of database class. A mock-up of online shopping. Made with SQL, Node.js, HTML and CSS.</p>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/Flap-Flap-Revolution">
+                        <img src="images/projects/Flap_Flap_Revolution.PNG">
+                        <h3>Flap Flap Revolution</h3>
+                        <br><br>
+                        <p>A combined game of Flappy Bird and Dance Dance Revolution controlled by voice input. Made with Unity game engine and C#.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/UnityChan-cewit2018">
+                        <img src="images/projects/VR_shopping.jpg">
+                        <h3>VR Shopping</h3>
+                        <br><br>
+                        <p>VR shopping prototype. Made with Unity game engine and C#.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/VR-DJ">
+                        <img src="images/projects/VR_DJ.PNG">
+                        <h3>VR DJ</h3>
+                        <br><br>
+                        <p>Using Windows Speech Recognition Engine to make a voice command DJ game. Made with Unity game engine.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/SBUtltmedia/aframe-websocket-component">
+                        <img src="images/projects/aframe-websocket-component.PNG">
+                        <h3>Websocket Aframe Demo</h3>
+                        <br><br>
+                        <p>Developed for in-class live model demo. Made with HTML, Node.js, Aframe.</p>
+                    </a>
+                </div>
+                <br>
+                <div class="work">
+                    <a href="https://github.com/judy0501/soundReactiveOpticFiber">
+                        <img src="images/projects/optic_fiber.jpg">
+                        <h3>Sound Reactive Optic Fiber</h3>
+                        <br><br>
+                        <p>Contributed towards the development Boat-like sculpture by Nobuho Nagasawa, the optic fiber will change colors based on real-time recording. Made with Python.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="social"><a href="https://www.instagram.com/jhc_judy/" class="fa fa-instagram"></a></div>
+        <div class="social"><a href="https://www.linkedin.com/in/judy-chen-348558155/" class="fa fa-linkedin"></a></div>
+        <div class="social"><a href="https://github.com/judy0501" class="fa fa-github"></a></div>
+        <br><br>
+        <div class="content">judychen92174@gmail.com</div>
+        <br>
+    </div>
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            } // Get all elements with class="tablinks" and remove the class "active" 
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            } // Show the current tab, and add an "active" class to the button that opened the tab 
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body> </html>
