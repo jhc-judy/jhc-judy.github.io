@@ -105,113 +105,100 @@ li a:not(:last-child) {
     /*    display words*/
 }
 
-
-/* Caption text */
-.caption-container {
+.container h1 {
+    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;
+    width: 100%;
+    margin: auto;
     text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-}
-
-.smallpic img {
-    float: left;
-    max-width: 25%;
-    object-fit: contain;
-    opacity: 0.5;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-    transition: 1s;
-}
-
-.active,
-.demo:active {
-    opacity: 1;
-    transition: 1s;
 }
 
 /* The Modal (background) */
 .modal {
     display: none;
+    /* Hidden by default */
     position: fixed;
+    /* Stay in place */
     z-index: 1;
-    padding-top: 3%;
+    /* Sit on top */
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
+    /* Full width */
     height: 100%;
     overflow: auto;
-    background-color: black;
-    z-index: 11;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content (Image) */
 .modal-content {
-    position: relative;
-    background-color: #fefefe;
     margin: auto;
-    padding: 0;
-    width: 100%;
-    max-width: 500px;
-    /*    vertical-align: middle;*/
+    display: block;
+    max-height:60%;
+    max-width: 80%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* The Close Button */
 .close {
-    color: white;
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .close:hover,
-.close:focus,
-.close:active {
-    color: #999;
+.close:focus {
+    color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Hide the slides by default */
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover,
-.prev:active,
-.next:active {
-    background-color: rgba(0, 0, 0, 0.8);
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
 }
 
 .statement p {
