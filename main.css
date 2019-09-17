@@ -332,16 +332,10 @@ li a:not(:last-child) {
 }
 
 .project {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 300px;
-    -moz-column-width: 300px;
-    column-width: 300px;
-    -webkit-column-gap: 2%;
-    -moz-column-gap: 5%;
     max-width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project > .work {
@@ -349,16 +343,16 @@ li a:not(:last-child) {
     padding: 10px;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 10px;
     max-width: 100%;
+    min-width: 300px;
     cursor: pointer;
     z-index: 10;
     min-height: 450px;
-    max-width: 300px;
+    max-width: 350px;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
-/*    margin: 2em;*/
 }
 
 .work img {
