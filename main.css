@@ -332,10 +332,11 @@ li a:not(:last-child) {
 }
 
 .project {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project > .work {
