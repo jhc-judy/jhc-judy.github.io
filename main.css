@@ -231,6 +231,10 @@ li a:not(:last-child) {
 */
 }
 
+#intro {
+    text-align: justify;
+}
+
 .overlay {
     position: absolute;
     top: 0;
