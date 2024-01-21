@@ -2,6 +2,7 @@
 
 html {
     /*    box-sizing: border-box;*/
+    scroll-behavior: smooth;
 }
 
 *,
@@ -28,13 +29,16 @@ html {
     font-weight: normal!important;
 }
 
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(28,29,34, 0.5);
+    text-align: center;
+}
+
 .menu {
-    /*    position: fixed;*/
-    display: flex;
-    margin: auto;
-    height: 50px;
+    display: inline-flex;
     list-style: none;
-    padding-top: 10px;
     z-index: 10;
 }
 
@@ -44,11 +48,12 @@ html {
     height: 50px;
     transition: background-position-x 0.9s linear;
     text-align: center;
+    color: #1c1d22!important;
 }
 
 a {
     font-size: 22px;
-    color: #777;
+    color: seashell;
     text-decoration: none;
     transition: all 0.45s;
 }
@@ -62,7 +67,7 @@ a {
 .menu li:hover a,
 .menu li:active a {
     color: #d94f5c;
-    text-shadow: 1px 1px 2px black, 0 0 25px #d94f5c, 0 0 5px #d94f5c;
+    text-shadow: 1px 1px 2px seashell, 0 0 25px #d94f5c, 0 0 5px #d94f5c;
 }
 
 li a:not(:last-child) {
@@ -216,6 +221,13 @@ li a:not(:last-child) {
     z-index: 10;
 }
 
+#juju {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
 .name {
     max-width: 100%;
     font-size: 300%;
@@ -266,34 +278,23 @@ li a:not(:last-child) {
     min-width: 300px;
 }
 
-/*
-.about:hover .overlay,
-.about:active .overlay {
-    opacity: 1;
-}
-*/
 
 .me {
-    display: table-cell;
+/*    display: table-cell;*/
     vertical-align: middle;
     text-align: center;
     margin: auto;
-    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
+/*    box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;*/
+    width: 100%;
+/*
     width: 80%;
-    max-width: 600px;
-    /*    margin-bottom: 150px;*/
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -65%);
     -webkit-transform: translate(-50%, -65%);
     -ms-transform: translate(-50%, -65%);
-}
-
-.about:hover .me,
-.about:active .me {
-    opacity: 0.3;
-    transition: 1s;
+*/
 }
 
 .footer {
@@ -404,6 +405,11 @@ li a:not(:last-child) {
     vertical-align: middle;
     text-align: center;
     width: 80%;
+}
+
+.tab {
+    margin-top: 100px;
+    display: inline-block;
 }
 
 /* Style the buttons that are used to open the tab content */
