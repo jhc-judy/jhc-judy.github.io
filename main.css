@@ -51,7 +51,7 @@ nav {
     color: #1c1d22!important;
 }
 
-a {
+.menu  a {
     font-size: 22px;
     color: seashell;
     text-decoration: none;
@@ -78,6 +78,12 @@ li a:not(:last-child) {
     0% {
         background-position-x: 490px;
     }
+}
+
+a {
+    color: seashell;
+    text-decoration: none;
+    transition: all 0.45s;
 }
 
 .gallery {
