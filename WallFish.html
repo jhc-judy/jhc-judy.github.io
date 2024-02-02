@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>JHC_Judy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html#home">JHC_Judy</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="desp">
+        <h1>Wall Fish</h1>
+        <h4>Concept for Site-Specific Installation<br> 2018</h4>
+        <div class="display-container">
+            <img class="mySlides" src="images/artwork/17_wall_fish_result.JPG" onclick="openModal(this);" alt="Result" />
+            <img class="mySlides" src="images/artwork/17_wall_fish.jpg" onclick="openModal(this);" alt="Process" />
+            <video class="mySlides" height="350" autoplay loop muted title="Plaster Maquete">
+                <source src="images/artwork/17_wall_fish_plaster.mp4" type="video/mp4">
+            </video>
+
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <p>Wall Fish is a site-specific installation designed for the Wang Center at Stony Brook. This distinctive structure houses multifunctional facilities of theater, gallery, lecture hall, chapel, and dining hall. The artwork intricately weaves together the influences of East Asian and American cultures with a global perspective. It explores the fusion of the familiar and the concept of mobility, giving rise to something entirely new. Each location within the installation evokes a distinct sense of water's presence, contributing to varying tones and moods based on factors like volume, timing, and the sound of flowing water. The transitional spaces between floors offer an ever-changing experience, a stroll along the plain white wall creates a wave-like sensation, and entering the space brings a sense of tranquility as you encounter fish swimming within the walls.</p>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <div id="title"></div>
+            <img class="modal-content" id="img01">
+            <div id="alt"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var title = document.getElementById("title");
+        var alt = document.getElementById("alt");
+
+        function openModal(el) {
+            modal.style.display = "block";
+            modalImg.src = el.src;
+            title.innerHTML = el.title;
+            alt.innerHTML = el.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

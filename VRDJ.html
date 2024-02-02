@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>JHC_Judy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html#home">JHC_Judy</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="desp">
+        <h1>VR DJ</h1>
+        <h4>2018<div class="github"><a href="https://github.com/jhc-judy/VR-DJ" class="fa fa-github"></a></div></h4>
+        
+        <div class="display-container">
+            <iframe width="560" height="350" src="https://www.youtube.com/embed/DvDZY7OE4yk?si=M7gUerqB4zypb7Q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <p>
+            As a side project during my internship with HTC, I developed a voice control game, leveraging Unity, the Vive Headset, and a Speech Engine. I created an interactive experience wherein users could manipulate the targeted frequency on the equalizer and adjust the volume of the music through voice commands. This project showcased the integration of cutting-edge technologies to enhance user interaction and control within a virtual environment.
+        </p>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <div id="title"></div>
+            <img class="modal-content" id="img01">
+            <div id="alt"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var title = document.getElementById("title");
+        var alt = document.getElementById("alt");
+
+        function openModal(el) {
+            modal.style.display = "block";
+            modalImg.src = el.src;
+            title.innerHTML = el.title;
+            alt.innerHTML = el.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

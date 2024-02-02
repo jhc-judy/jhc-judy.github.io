@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>JHC_Judy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html#home">JHC_Judy</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="desp">
+        <h1>Hand Augmentation</h1>
+        <h4>2016</h4>
+
+        <div class="display-container">
+            <iframe class="mySlides" width="560" height="350" src="https://www.youtube.com/embed/3jSNGWHbJAk?si=zuJpkq7wbrCv3miT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <video class="mySlides" height="350" autoplay loop muted title="Testing Sensor">
+                <source src="images/projects/01_test_vid.mp4" type="video/mp4">
+            </video>
+            
+            <video class="mySlides" height="350" autoplay loop muted title="Testing on Glove">
+                <source src="images/projects/01_Hand_Augmentation_development.mp4" type="video/mp4">
+            </video>
+            
+            <img class="mySlides" src="images/projects/01_Hand_Augmentation_presentation.JPG" onclick="openModal(this);" alt="Presentation" />
+
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <p>
+            Hand Augmentation is a project produced during HackFEAT 2016, a two-day competition focusing on human augmentation. Our mission was to establish a link between the user's hand and a crafted artificial counterpart, enabling real-time mirroring of movements.
+            <br>
+            As the project lead, I suggested using “hand” as our topic after evaluating the resources and tools provided, which included Little Bits and a couple of different sensors provided by a maker lab in the university. The use of bend sensors, coupled with servo motors, formed the core of our technological approach. A calibration process was needed to align the rotational degrees with the natural degrees of freedom inherent in human finger joints. Aside from the technical aspect, I adeptly repurposed the plastic utensils sourced from the university cafeteria to construct the framework of the artificial hand. The integration process involved the assembly of motors with the artificial hands, while sensors were affixed to a winter glove for enhanced control.
+            <br>
+            The Hand Augmentation project harbors substantial potential for remote control applications and the execution of tasks in confined spaces where human presence may be impractical. Our team won the first prize in this competition.
+        </p>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <div id="title"></div>
+            <img class="modal-content" id="img01">
+            <div id="alt"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var title = document.getElementById("title");
+        var alt = document.getElementById("alt");
+
+        function openModal(el) {
+            modal.style.display = "block";
+            modalImg.src = el.src;
+            title.innerHTML = el.title;
+            alt.innerHTML = el.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

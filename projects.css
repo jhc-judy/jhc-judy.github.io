@@ -1,0 +1,88 @@
+.desp {
+    color: white;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.desp * {
+    padding-bottom: 10px;
+}
+
+h1,
+h4 {
+    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+.display-container img,
+.display-container video{
+    max-height: 350px;
+    min-height: 350px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+.display-container iframe{
+    display: block;
+    margin: auto;
+}
+
+.mySlides {
+    cursor: pointer;
+}
+
+button {
+    color: #fff !important;
+    background-color: #1c1d22 !important;
+    border: none;
+    display: inline-block;
+    padding: 16px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:hover {
+    text-shadow: 1px 1px 2px black, 0 0 16px #7affe9, 0 0 5px #7affe9;
+}
+
+.left {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+
+.right {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(0%, -50%);
+}
+
+.github {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    min-width: 60px;
+    font-size: 2rem;
+}
+
+.github:hover {
+    text-shadow: 1px 1px 2px black, 0 0 16px #7affe9, 0 0 5px #7affe9;
+}
