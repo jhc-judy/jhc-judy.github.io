@@ -129,11 +129,13 @@ a {
     visibility: hidden;
 }
 
-.artwork:hover p {
+.artwork:hover p,
+.artwork p:hover{
     visibility:visible;
 }
 
-.artwork:hover img {
+.artwork:hover img,
+.artwork img:hover{
     opacity: 0.3;
     transition: 0.3s;
 }
