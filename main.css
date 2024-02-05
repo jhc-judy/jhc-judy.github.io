@@ -276,7 +276,7 @@ a {
 }
 
 #intro {
-    text-align: justify;
+    text-align: start;
 }
 
 .overlay {
@@ -422,8 +422,9 @@ a {
     color: white;
     vertical-align: middle;
     text-align: center;
-    width: 80%;
-    max-width: 600px;
+    width: 60%;
+    font-size: 18px;
+/*    max-width: 600px;*/
 }
 
 .pitch h1 {
