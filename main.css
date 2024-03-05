@@ -105,7 +105,7 @@ a {
 .gallery * {
     display: block;
     margin: auto;
-    max-width: 300px;
+    max-width: 100%;
     cursor: pointer;
     margin-bottom: 10px;
 }
