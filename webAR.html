@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
+    <script src="./js/aframe-spe-particles-component.min.js"></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded arjs='sourceType: webcam;'>
+
+        <a-assets>
+            <a-mixin id="label" text="align: center; width: 10" position="0 -1.5 0"></a-mixin>
+        </a-assets>
+        
+        <a-entity spe-particles="texture: assets/bubble.png; color: #fff; opacity: .2,.5,.3; blending: normal; position-spread: 2 0 2; radius: 0; randomize-position: true; particle-count: 50; velocity: 0 .5 0; velocity-spread: .1 .2 .1; wiggle-spread: 1 0 1; maxAge: 6; emitter-scale: 1000"></a-entity>
+<!--
+        <a-entity spe-particles="texture: assets/blob.png; color: violet; position-spread: .5; distribution: sphere; radius: 0; size: 8; randomize-position: true; particle-count: 4; max-age: .1">
+        </a-entity>
+-->
+
+<!--        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>-->
+<!--		<a-marker-camera preset='hiro'></a-marker-camera>-->
+        <a-marker-camera type='pattern' url='./images/pattern-JHC.patt'></a-marker-camera>
+    </a-scene>
+</body>
+
+</html>
