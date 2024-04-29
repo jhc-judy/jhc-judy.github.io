@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
     <script src="./js/aframe-spe-particles-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
 </head>
 
 <body style="margin: 0px; overflow: hidden;">
@@ -15,15 +16,27 @@
         <a-assets>
             <a-mixin id="label" text="align: center; width: 10" position="0 -1.5 0"></a-mixin>
         </a-assets>
-        
+
         <a-entity spe-particles="texture: assets/bubble.png; color: #fff; opacity: .2,.5,.3; blending: normal; position-spread: 2 0 2; radius: 0; randomize-position: true; particle-count: 50; velocity: 0 .5 0; velocity-spread: .1 .2 .1; wiggle-spread: 1 0 1; maxAge: 6; emitter-scale: 1000"></a-entity>
-<!--
+        
+        <a-entity spe-particles="texture: assets/fog.png; position-spread: 2 0 2; velocity-spread: .1 .05 .1; particle-count: 50; max-age: 10; size: 10,15; opacity: 0,1,0; randomize-position: true">
+        </a-entity>
+
+        <!-- define your gltf asset -->
+        <a-assets>
+            <a-asset-item id="eel" src="./assets/gardenEel.glb"></a-asset-item>
+        </a-assets>
+        <!-- use your gltf model -->
+        <a-entity gltf-model="#eel" scale="0.1 0.1 0.1" position='1.25 -2.25 0.25' rotation='0 180 0' animation-mixer></a-entity>
+        
+        
+        <!--
         <a-entity spe-particles="texture: assets/blob.png; color: violet; position-spread: .5; distribution: sphere; radius: 0; size: 8; randomize-position: true; particle-count: 4; max-age: .1">
         </a-entity>
 -->
 
-<!--        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>-->
-<!--		<a-marker-camera preset='hiro'></a-marker-camera>-->
+        <!--        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>-->
+        <!--		<a-marker-camera preset='hiro'></a-marker-camera>-->
         <a-marker-camera type='pattern' url='./images/pattern-JHC.patt'></a-marker-camera>
     </a-scene>
 </body>
