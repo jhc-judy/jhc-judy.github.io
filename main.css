@@ -441,16 +441,19 @@ a {
 }
 
 .tab {
-    margin-top: 100px;
-    display: inline-block;
+    position: fixed;
+    width: inherit;
+    text-align: center;
+    margin-top: 29px;
+    background-color: rgba(28, 29, 34, 0.5);
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-    margin: 0 10px;
+/*    margin: 0 10px;*/
     background-color: inherit;
     color: white;
-    float: left;
+/*    float: left;*/
     border: none;
     outline: none;
     cursor: pointer;
