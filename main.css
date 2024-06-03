@@ -156,7 +156,7 @@ a {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 100px;
+    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -174,7 +174,7 @@ a {
 .modal-content {
     margin: auto;
     display: block;
-    max-height: 70%;
+    max-height: 80%;
     max-width: 80%;
 
     /*

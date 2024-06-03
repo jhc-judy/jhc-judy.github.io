@@ -22,18 +22,16 @@
     <div class="desp">
         <h1>Family Dinner - Post-COVID Edition</h1>
         <h4>Maple Wood <br> 12” x 4” x 9”<br> 2023</h4>
+
+        <p>&emsp; "Tick tock." I sat quietly in a corner of Hearth, a cozy restaurant nestled in the East Village of Manhattan on a lazy Sunday afternoon. The smell of freshly cooked food wafted through the air, mixed with sparse chatter and clinking of silverware. It was the first time my family had gathered together in three long years.</p>
+
         <div class="display-container">
             <img class="mySlides" src="images/artwork/13_Family_Dinner_1.png" onclick="openModal(this);" alt="Angle 1" />
             <img class="mySlides" src="images/artwork/13_Family_Dinner_2.png" onclick="openModal(this);" alt="Angle 2" />
             <img class="mySlides" src="images/artwork/13_Family_Dinner_3.png" onclick="openModal(this);" alt="Angle 3" />
             <img class="mySlides" src="images/artwork/13_Family_Dinner_4.png" onclick="openModal(this);" alt="Angle 4" />
             <img class="mySlides" src="images/artwork/13_Family_Dinner_5.png" onclick="openModal(this);" alt="Angle 5" />
-
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-
-        <p>"Tick tock." I sat quietly in a corner of Hearth, a cozy restaurant nestled in the East Village of Manhattan on a lazy Sunday afternoon. The smell of freshly cooked food wafted through the air, mixed with sparse chatter and clinking of silverware. It was the first time my family had gathered together in three long years.</p>
 
         <div id="myModal" class="modal">
 
@@ -47,31 +45,6 @@
         </div>
 
     </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-    </script>
 
     <script>
         // Get the modal

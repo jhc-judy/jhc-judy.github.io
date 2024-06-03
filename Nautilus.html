@@ -22,17 +22,15 @@
     <div class="desp">
         <h1>Nautilus</h1>
         <h4>Metal and Wood <br> 12” x 16” x 8"<br> 2018</h4>
+
+        <p>&emsp; A ritual unfolds, involving the meticulous cutting, grinding, and welding of 34 individual metal pieces. The deliberate process of cutting symbolizes the necessary separation from the old, making room for new possibilities. Grinding refines the edges, a metaphor for the challenges and abrasions that shape us. The welding, a symbolic union, embodies the strength of embracing diversity and forging connections. Each incision, every grind, and the searing fusion of metal become a ceremonial act, echoing the essence of progression and growth.</p>
+
         <div class="display-container">
             <img class="mySlides" src="images/artwork/14_Nautilus.JPG" onclick="openModal(this);" alt="Nautilus" />
             <video class="mySlides" autoplay loop muted title="Maquete">
                 <source src="images/artwork/14_Nautilus_maquete.mp4" type="video/mp4">
             </video>
-
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-
-        <p>A ritual unfolds, involving the meticulous cutting, grinding, and welding of 34 individual metal pieces. The deliberate process of cutting symbolizes the necessary separation from the old, making room for new possibilities. Grinding refines the edges, a metaphor for the challenges and abrasions that shape us. The welding, a symbolic union, embodies the strength of embracing diversity and forging connections. Each incision, every grind, and the searing fusion of metal become a ceremonial act, echoing the essence of progression and growth.</p>
 
         <div id="myModal" class="modal">
 
@@ -46,31 +44,6 @@
         </div>
 
     </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-    </script>
 
     <script>
         // Get the modal

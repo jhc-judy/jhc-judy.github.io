@@ -18,28 +18,23 @@ h4 {
     font-weight: normal;
 }
 
-/*
-.display-container img,
-.display-container video{
-    max-height: 350px;
-    min-height: 350px;
-    height: auto;
-    width: auto;
-    display: block;
-    margin: auto;
+
+.display-container {
+    margin-top: 20px;
+    text-align: center;
 }
-*/
 
 .display-container img,
-.display-container video,
-.display-container iframe {
-/*
-    width: 60%;
-    min-width: 560px;
-*/
-    max-height: 500px;
-    display: block;
+.display-container video{
+/*    max-width: 10%;*/
+    display: inline-flex;
     margin: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.display-container iframe {
+    height: 250px;
 }
 
 .mySlides {

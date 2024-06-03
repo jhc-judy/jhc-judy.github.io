@@ -22,15 +22,15 @@
     <div class="desp">
         <h1>Distractions</h1>
         <h4>Oil on Canvas <br> 40” x 30” <br>2018</h4>
-        <div class="display-container">
-            <img class="mySlides" src="images/artwork/15_Distractions.JPG" onclick="openModal(this);" alt="Full Image" />
-            <img class="mySlides" src="images/artwork/15_Distractions_sketches.jpg" onclick="openModal(this);" alt="Conceptual Sketches" />
 
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
 
         <p>“Light fascinates. Light guides. And light distracts. Much like my entrance into this room, drawn irresistibly to the lights, I explore with my tiny legs, savoring a hint of orange, a splash of yellow. Over there, I rediscover youth, the allure of putting my legs on that glow, tasting a touch of pink, a whisper of purple. In each moment of chasing, tasting, and darting between lights, I unveil a new fragment of the room's essence.”</p>
+
+        <div class="display-container">
+            <img class="mySlides" src="images/artwork/15_Distractions.JPG" onclick="openModal(this);" alt="Full Image" />
+            <img class="mySlides" src="images/artwork/15_Distractions_sketches.jpg" onclick="openModal(this);" alt="Concept Sketches" />
+
+        </div>
 
         <div id="myModal" class="modal">
 
@@ -45,30 +45,6 @@
 
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-    </script>
 
     <script>
         // Get the modal

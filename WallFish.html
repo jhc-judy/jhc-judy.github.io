@@ -22,18 +22,16 @@
     <div class="desp">
         <h1>Wall Fish</h1>
         <h4>Concept for Site-Specific Installation<br> 2018</h4>
+
+        <p>&emsp; Wall Fish is a site-specific installation designed for the Wang Center at Stony Brook. This distinctive structure houses multifunctional facilities of theater, gallery, lecture hall, chapel, and dining hall. The artwork intricately weaves together the influences of East Asian and American cultures with a global perspective. It explores the fusion of the familiar and the concept of mobility, giving rise to something entirely new. Each location within the installation evokes a distinct sense of water's presence, contributing to varying tones and moods based on factors like volume, timing, and the sound of flowing water. The transitional spaces between floors offer an ever-changing experience, a stroll along the plain white wall creates a wave-like sensation, and entering the space brings a sense of tranquility as you encounter fish swimming within the walls.</p>
+
         <div class="display-container">
-            <img class="mySlides" src="images/artwork/17_wall_fish_result.JPG" onclick="openModal(this);" alt="Result" />
-            <img class="mySlides" src="images/artwork/17_wall_fish.jpg" onclick="openModal(this);" alt="Process" />
-            <video class="mySlides" autoplay loop muted title="Plaster Maquete">
-                <source src="images/artwork/17_wall_fish_plaster.mp4" type="video/mp4">
-            </video>
+            <img class="mySlides" src="images/artwork/17_wall_fish_result.JPG" onclick="openModal(this);" alt="Result maquete" />
+            <img class="mySlides" src="images/artwork/17_wall_fish_location.jpg" onclick="openModal(this);" alt="Concept location" />
+            <img class="mySlides" src="images/artwork/17_wall_fish_concept.jpg" onclick="openModal(this);" alt="Concept drawing" />
+            <img class="mySlides" src="images/artwork/17_wall_fish_plaster.gif" onclick="openModal(this);" alt="Plaster process" />
 
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-
-        <p>Wall Fish is a site-specific installation designed for the Wang Center at Stony Brook. This distinctive structure houses multifunctional facilities of theater, gallery, lecture hall, chapel, and dining hall. The artwork intricately weaves together the influences of East Asian and American cultures with a global perspective. It explores the fusion of the familiar and the concept of mobility, giving rise to something entirely new. Each location within the installation evokes a distinct sense of water's presence, contributing to varying tones and moods based on factors like volume, timing, and the sound of flowing water. The transitional spaces between floors offer an ever-changing experience, a stroll along the plain white wall creates a wave-like sensation, and entering the space brings a sense of tranquility as you encounter fish swimming within the walls.</p>
 
         <div id="myModal" class="modal">
 
@@ -48,30 +46,6 @@
 
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-    </script>
 
     <script>
         // Get the modal

@@ -21,20 +21,23 @@
     <br><br><br><br>
     <div class="desp">
         <h1>Sound Cloud</h1>
-        <h4>2019<div class="github"><a href="https://github.com/jhc-judy/Sound-Interactive-Cloud" class="fa fa-github"></a></div></h4>
-
-        <div class="display-container">
-            <iframe class="mySlides" src="https://www.youtube.com/embed/LgjgnT4ZLZI?si=uZcF-Pfj3Oed9jje" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
-            <img class="mySlides" src="images/projects/05_Interactive_Sound_Cloud_Sketches.jpg" onclick="openModal(this);" alt="Sketches" />
-
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
+        <h4>2019<div class="github"><a href="https://github.com/jhc-judy/Sound-Interactive-Cloud" class="fa fa-github"></a></div>
+        </h4>
 
         <p>
-            Sound Cloud is an interactive art piece inspired by the connection between sight and sound. The fabricated cotton cloud changes colors in response to the rhythm and intensity of the inputted music, with audio signals processed through a Max MSP sketch.  The Arduino housed within the cloud then orchestrated the signals into harmonious synchronization between auditory and visual elements.
+            &emsp; Sound Cloud is an interactive art piece inspired by the connection between sight and sound. The fabricated cotton cloud changes colors in response to the rhythm and intensity of the inputted music, with audio signals processed through a Max MSP sketch. The Arduino housed within the cloud then orchestrated the signals into harmonious synchronization between auditory and visual elements.
         </p>
+
+        <div class="display-container">
+
+            <img class="mySlides" src="images/projects/05_Interactive_Sound_Cloud_Sketches_1.jpg" onclick="openModal(this);" alt="Initial concept sketch" />
+            <img class="mySlides" src="images/projects/05_Interactive_Sound_Cloud_Sketches_2.jpg" onclick="openModal(this);" alt="revised sketch to include structures" />
+            <img class="mySlides" src="images/projects/05_Interactive_Sound_Cloud_Sketches_3.jpg" onclick="openModal(this);" alt="Circuit diagram" />
+            <img class="mySlides" src="images/projects/05_Interactive_Sound_Cloud_Sketches_4.jpg" onclick="openModal(this);" alt="Implemetation" />
+            
+            <iframe class="mySlides" src="https://www.youtube.com/embed/LgjgnT4ZLZI?si=uZcF-Pfj3Oed9jje" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
 
         <div id="myModal" class="modal">
 
@@ -48,31 +51,6 @@
         </div>
 
     </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-    </script>
 
     <script>
         // Get the modal
