@@ -205,18 +205,18 @@
                     this.string = new THREE.Line(stringGeom, stringMat);
 
                     // fish body
-                    var fheadGeom = new THREE.CylinderGeometry( 1, 7, 10, 32 ); 
+                    var fheadGeom = new THREE.CylinderGeometry(1, 7, 10, 32);
                     this.body = new THREE.Mesh(fheadGeom, blueMat);
-                    var fbodyGeom = new THREE.CylinderGeometry( 7, 7, 10, 32 );
+                    var fbodyGeom = new THREE.CylinderGeometry(7, 7, 10, 32);
                     this.fbody = new THREE.Mesh(fbodyGeom, blueMat);
                     this.fbody.position.y = -10;
-                    var flegGeom = new THREE.CylinderGeometry( 7, 1, 10, 32 );
+                    var flegGeom = new THREE.CylinderGeometry(7, 1, 10, 32);
                     this.fleg = new THREE.Mesh(flegGeom, blueMat);
                     this.fleg.position.y = -20;
-                    var ftailGeom = new THREE.CylinderGeometry( 1, 5, 10, 32 );
+                    var ftailGeom = new THREE.CylinderGeometry(1, 5, 10, 32);
                     this.ftail = new THREE.Mesh(ftailGeom, blueMat);
                     this.ftail.position.y = -30;
-                    
+
                     this.body.add(this.fbody);
                     this.body.add(this.fleg);
                     this.body.add(this.ftail);
@@ -224,12 +224,12 @@
                     this.threeGroup.add(this.string);
                     this.threeGroup.add(this.body);
 
-//                    this.threeGroup.traverse(function(object) {
-//                        if (object instanceof THREE.Mesh) {
-//                            object.castShadow = true;
-//                            object.receiveShadow = true;
-//                        }
-//                    });
+                    //                    this.threeGroup.traverse(function(object) {
+                    //                        if (object instanceof THREE.Mesh) {
+                    //                            object.castShadow = true;
+                    //                            object.receiveShadow = true;
+                    //                        }
+                    //                    });
 
                 }
 
@@ -460,7 +460,7 @@
                     this.cheeks = new THREE.Mesh(cheeksGeom, whiteMat);
                     this.cheeks.position.set(0, 7, 20);
                     this.cheeks.rotation.y = -Math.PI / 2;
-                    
+
                     // mouth
                     var mouthGeom = new THREE.CylinderGeometry(5, 2, 10, 32);
                     this.mouth = new THREE.Mesh(mouthGeom, whiteMat);
@@ -1009,7 +1009,13 @@
         <img id="juju" src="images/Juju/juju.gif">
         <div id="intro">
             <b style="color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;">JHC_JUDY</b>, born in  Taiwan, is a multidisciplinary artist who passionately weaves traditional art forms with cutting-edge technology. She holds a B.S. in Computer Science and Studio Arts with Honors from Stony Brook University, where she also minored in Digital Arts. Her distinctive fusion of art and technology has earned her recognition in various hackathons and award competitions, including Audience Choice - Best in Show at the Gramercy Art Show, the Gabriel Award for Excellence in Painting, SBUHacks - Best Game Dev, Hack@CEWIT - VR Best Dev, and Hackfeat - 1st Place. Judy's work stands as a testament to her ability to push the boundaries of what is possible in art and technology. She is continuously striving to improve her skills and expand her creative horizons.</div>
+    text-shadow: 1px 1px 2px black, 0 0 25px #7affe9, 0 0 5px #7affe9;">JHC_JUDY</b>, born in Taiwan, is a multidisciplinary artist who passionately weaves traditional art forms with cutting-edge technology. She holds a B.S. in Computer Science and Studio Arts with Honors from Stony Brook University, where she also minored in Digital Arts. Her distinctive fusion of art and technology has earned her recognition in various hackathons and award competitions, including Audience Choice - Best in Show at the Gramercy Art Show, the Gabriel Award for Excellence in Painting, SBUHacks - Best Game Dev, Hack@CEWIT - VR Best Dev, and Hackfeat - 1st Place. Judy's work stands as a testament to her ability to push the boundaries of what is possible in art and technology. She is continuously striving to improve her skills and expand her creative horizons.
+            <br>
+            <br>
+            <br>
+            <br>
+            "As an artist, my work serves as an extension of myself and a means of expression. Each piece I create is a visual diary, a conversation with my inner self, where emotions, experiences, and thoughts are transformed into tangible forms. Through color, texture, form, and the interplay of various mediums, I strive to encapsulate the fleeting moments of daily life, those small, often overlooked instances that carry deep significance. My art is not just a reflection of the world around me, but an act of preserving the beauty found in the ephemeral, and a reminder to pause and appreciate the transient wonders that shape our existence."
+        </div>
         <span style="display:block; height: 80px;"></span>
         <h1>Awards</h1><br>
         <p style="text-align: left;">
@@ -1023,10 +1029,10 @@
             &emsp; ✥ Award of Honor, Stony Brook University<br><br>
             <u>2018</u><br><br>
             &emsp; ✥ <a href="https://devpost.com/software/flap-flap-revolution">SBUHacks – Best Game Dev🔗</a><br><br>
-            &emsp; ✥ <a href ="https://devpost.com/software/unitychan-cewit2018" >Hack@CEWIT – VR Best Dev🔗</a><br><br>
+            &emsp; ✥ <a href="https://devpost.com/software/unitychan-cewit2018">Hack@CEWIT – VR Best Dev🔗</a><br><br>
             &emsp; ✥ Staller Center Awards for Excellence, Stony Brook University<br><br>
             <u>2016</u><br><br>
-            &emsp; ✥ <a href ="https://web.archive.org/web/20210724034323/http://www.hackfeat.com/index.html" >Hackfeat – Best Augmentation of the Human Body (1st Place)🔗</a></p>
+            &emsp; ✥ <a href="https://web.archive.org/web/20210724034323/http://www.hackfeat.com/index.html">Hackfeat – Best Augmentation of the Human Body (1st Place)🔗</a></p>
         <span style="display:block; height: 80px;"></span>
         <h1>Art Shows</h1><br>
         <p style="text-align: left;">
@@ -1074,7 +1080,7 @@
 
     <div class="footer">
         <div class="social"><a href="https://www.instagram.com/jhc_judy/" class="fa fa-instagram"></a></div>
-<!--        <div class="social"><a href="https://www.linkedin.com/in/judy-chen-348558155/" class="fa fa-linkedin"></a></div>-->
+        <!--        <div class="social"><a href="https://www.linkedin.com/in/judy-chen-348558155/" class="fa fa-linkedin"></a></div>-->
         <div class="social"><a href="https://github.com/jhc-judy" class="fa fa-github"></a></div>
         <br><br>
         <div class="content">juhschen@gmail.com</div>
