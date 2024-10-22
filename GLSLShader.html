@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>JHC_Judy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html#home">JHC_Judy</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="desp">
+        <h1>GLSL Shader</h1>
+        <h4>2022<div class="github"><a href="https://github.com/jhc-judy/GLSL_shader" class="fa fa-github"></a></div>
+        </h4>
+
+        <p>&emsp;I started my journey with painting on canvas, but I soon became curious about how I could translate that experience into code. Learning GLSL shaders opened up a new world for me, where I could "paint" with code and manipulate pixels directly. This practice allows me to explore the visual possibilities of light, texture, and movement in ways traditional mediums can't, adding a dynamic, interactive layer to my work that constantly evolves with each frame.
+        </p>
+
+
+        <div class="display-container">
+            <img class="mySlides" src="images/renders/circleColorPulse.gif" onclick="openModal(this);" alt="circleColorPulse.frag" />
+            <img class="mySlides" src="images/renders/morphGrid.gif" onclick="openModal(this);" alt="morphGrid.frag" />
+            <img class="mySlides" src="images/renders/mouse.gif" onclick="openModal(this);" alt="mouse.frag" />
+            <img class="mySlides" src="images/renders/rainbowSwirl.gif" onclick="openModal(this);" alt="rainbowSwirl.frag" />
+            <img class="mySlides" src="images/renders/warpGrid.gif" onclick="openModal(this);" alt="wrapGrid.frag" />
+            <img class="mySlides" src="images/renders/watercolor.gif" onclick="openModal(this);" alt="watercolor.frag" />
+            <img class="mySlides" src="images/renders/watercolor2.gif" onclick="openModal(this);" alt="watercolor2.frag" />
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <div id="title"></div>
+            <img class="modal-content" id="img01">
+            <div id="alt"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var title = document.getElementById("title");
+        var alt = document.getElementById("alt");
+
+        function openModal(el) {
+            modal.style.display = "block";
+            modalImg.src = el.src;
+            title.innerHTML = el.title;
+            alt.innerHTML = el.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
