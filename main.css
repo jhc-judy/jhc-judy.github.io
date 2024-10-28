@@ -152,12 +152,12 @@ button:hover {
 }
 
 .artwork:hover p,
-.artwork p:hover{
-    visibility:visible;
+.artwork p:hover {
+    visibility: visible;
 }
 
 .artwork:hover img,
-.artwork img:hover{
+.artwork img:hover {
     opacity: 0.3;
     transition: 0.3s;
 }
@@ -351,6 +351,18 @@ button:hover {
 */
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.grid-item {
+    /*    max-height: 600px;*/
+    max-width: 800px;
+    margin: auto;
+}
+
 .footer {
     text-align: center;
     /*    position: fixed;*/
@@ -446,7 +458,7 @@ button:hover {
     text-align: center;
     width: 60%;
     font-size: 18px;
-/*    max-width: 600px;*/
+    /*    max-width: 600px;*/
 }
 
 .pitch h1 {
@@ -466,16 +478,16 @@ button:hover {
     position: fixed;
     width: inherit;
     text-align: center;
-/*    margin-top: 29px;*/
+    /*    margin-top: 29px;*/
     background-color: rgba(28, 29, 34, 0.5);
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-/*    margin: 0 10px;*/
+    /*    margin: 0 10px;*/
     background-color: inherit;
     color: white;
-/*    float: left;*/
+    /*    float: left;*/
     border: none;
     outline: none;
     cursor: pointer;
@@ -485,7 +497,8 @@ button:hover {
 }
 
 /* Change background color of buttons on hover */
-.links button:hover, .tab button:hover {
+.links button:hover,
+.tab button:hover {
     box-shadow: 0px 0px 30px #7affe9, 0px 0px 5px white;
     border-radius: 10px;
 }
@@ -515,5 +528,18 @@ button:hover {
 
     to {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+
+    .grid-item {
+        margin: auto;
     }
 }
