@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>JHC_Judy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html#home">JHC_Judy</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="desp">
+        <h1>Solitude</h1>
+        <h4>Resin, acrylics on wood<br> 6” x 5” x 4" <br>2025</h4>
+
+        <div class="grid-container">
+            <img class="grid-item" src="images/artwork/21_Solitude.png" alt="Solitude" />
+
+            <p class="grid-item">
+                Solitude is a resin sculpture enclosing a small frosted figure within a clear rectangular box. Around her, green and yellow resin vines grow outward in every direction beyond the frame.
+                <br>
+                The box is not a cage. It is the symbolism of being alone with oneself. The vines do not escape the enclosure so much as fill it, the way thoughts do during long periods of stillness. Growth here is slow, lateral, searching — the kind that happens when there is nothing else to do but tend to yourself.
+                <br>
+                There is a quality to solitude that only reveals itself in retrospect. The periods of stillness that felt like interruptions often turn out to be the moments that changed everything. Solitude is about that lag between the quiet and the growth, and the trust it takes to sit inside one without yet seeing the other.
+            </p>
+        </div>
+
+        <div class="display-container">
+<!--            <img class="mySlides" src="images/artwork/15_Distractions.JPG" onclick="openModal(this);" alt="Full Image" />-->
+
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <div id="title"></div>
+            <img class="modal-content" id="img01">
+            <div id="alt"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var title = document.getElementById("title");
+        var alt = document.getElementById("alt");
+
+        function openModal(el) {
+            modal.style.display = "block";
+            modalImg.src = el.src;
+            title.innerHTML = el.title;
+            alt.innerHTML = el.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
