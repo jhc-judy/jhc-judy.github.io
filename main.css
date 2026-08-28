@@ -93,7 +93,8 @@ a {
 button {
     color: #fff !important;
     background-color: transparent !important;
-    border: none;
+    border: 0.5px solid #fff;
+    border-radius: 10px;
     display: inline-block;
     padding: 16px 16px;
     vertical-align: middle;
